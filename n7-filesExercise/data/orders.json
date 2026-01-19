@@ -1,0 +1,235 @@
+{
+  "exportedAt": "2026-01-19T10:22:11Z",
+  "source": { "system": "ShopBackoffice", "version": "4.8.2" },
+  "currency": "EUR",
+  "customers": [
+    {
+      "customerId": "CUST-1001",
+      "profile": {
+        "name": { "first": "Ana", "last": "Silva" },
+        "email": "ana.silva@example.com",
+        "phone": "+351-912-000-111",
+        "marketingOptIn": true
+      },
+      "addresses": [
+        {
+          "type": "shipping",
+          "line1": "Rua do Ouro 12",
+          "city": "Lisbon",
+          "postalCode": "1100-060",
+          "country": "PT"
+        },
+        {
+          "type": "billing",
+          "line1": "Rua do Ouro 12",
+          "city": "Lisbon",
+          "postalCode": "1100-060",
+          "country": "PT"
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "ORD-90001",
+          "createdAt": "2026-01-12T14:05:33Z",
+          "status": "paid",
+          "channel": "web",
+          "tags": ["new-customer", "gift"],
+          "payment": {
+            "method": "card",
+            "provider": "Stripe",
+            "transactions": [
+              {
+                "txId": "TX-1A",
+                "amount": 79.97,
+                "fee": 2.45,
+                "captured": true
+              }
+            ]
+          },
+          "shipping": {
+            "carrier": "CTT",
+            "service": "expedited",
+            "tracking": {
+              "code": "PT1234567890",
+              "url": "https://track.example/pt123"
+            },
+            "cost": 4.99,
+            "deliveredAt": null
+          },
+          "items": [
+            {
+              "sku": "SKU-BOOK-001",
+              "name": "Data Pipelines, 2nd Ed.",
+              "qty": 1,
+              "unitPrice": 49.99,
+              "discounts": [
+                { "type": "promo", "code": "WELCOME10", "amount": 5.0 }
+              ],
+              "tax": { "rate": 0.23, "amount": 10.35 },
+              "metadata": { "category": "books", "weightKg": 0.7 }
+            },
+            {
+              "sku": "SKU-MUG-014",
+              "name": "“I ❤️ CSV” Mug",
+              "qty": 2,
+              "unitPrice": 14.99,
+              "discounts": [],
+              "tax": { "rate": 0.23, "amount": 6.89 },
+              "metadata": { "category": "merch", "color": "white" }
+            }
+          ],
+          "notes": "Customer said: \"Please wrap it, it's a gift.\""
+        },
+        {
+          "orderId": "ORD-90002",
+          "createdAt": "2026-01-18T09:11:02Z",
+          "status": "refunded",
+          "channel": "mobile",
+          "tags": [],
+          "payment": {
+            "method": "mbway",
+            "provider": "LocalPay",
+            "transactions": [
+              {
+                "txId": "TX-2A",
+                "amount": 19.99,
+                "fee": 0.35,
+                "captured": true
+              },
+              {
+                "txId": "TX-2B",
+                "amount": -19.99,
+                "fee": 0.0,
+                "captured": true,
+                "type": "refund"
+              }
+            ]
+          },
+          "shipping": {
+            "carrier": "DHL",
+            "service": "standard",
+            "tracking": { "code": "DHL000777", "url": null },
+            "cost": 0,
+            "deliveredAt": "2026-01-19T08:01:00Z"
+          },
+          "items": [
+            {
+              "sku": "SKU-CABLE-100",
+              "name": "USB-C Cable (2m)",
+              "qty": 1,
+              "unitPrice": 19.99,
+              "discounts": null,
+              "tax": { "rate": 0.23, "amount": 3.74 },
+              "metadata": { "category": "electronics", "warrantyMonths": 24 }
+            }
+          ],
+          "notes": null
+        }
+      ],
+      "supportTickets": [
+        {
+          "ticketId": "TCK-501",
+          "createdAt": "2026-01-18T10:12:00Z",
+          "type": "refund_request",
+          "status": "closed",
+          "messages": [
+            {
+              "at": "2026-01-18T10:12:00Z",
+              "from": "customer",
+              "text": "Item arrived late, please refund shipping."
+            },
+            {
+              "at": "2026-01-18T11:02:10Z",
+              "from": "agent",
+              "text": "Refund issued for shipping cost."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "customerId": "CUST-1002",
+      "profile": {
+        "name": { "first": "Miguel", "last": "Costa" },
+        "email": "miguel.costa@example.com",
+        "phone": null,
+        "marketingOptIn": false
+      },
+      "addresses": [
+        {
+          "type": "shipping",
+          "line1": "Av. da Liberdade 220",
+          "city": "Lisbon",
+          "postalCode": "1250-148",
+          "country": "PT"
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "ORD-90003",
+          "createdAt": "2026-01-05T20:44:10Z",
+          "status": "paid",
+          "channel": "partner",
+          "tags": ["b2b", "priority"],
+          "payment": {
+            "method": "invoice",
+            "provider": "NetTerms",
+            "dueDate": "2026-02-04",
+            "transactions": []
+          },
+          "shipping": {
+            "carrier": "CTT",
+            "service": "standard",
+            "tracking": null,
+            "cost": 7.5,
+            "deliveredAt": "2026-01-08T12:30:00Z"
+          },
+          "items": [
+            {
+              "sku": "SKU-LAPTOP-777",
+              "name": "Ultrabook 14\"",
+              "qty": 1,
+              "unitPrice": 899.0,
+              "discounts": [
+                { "type": "contract", "code": "B2B-2026", "amount": 50.0 }
+              ],
+              "tax": { "rate": 0.23, "amount": 195.27 },
+              "metadata": {
+                "category": "computers",
+                "serials": ["SN-A1", "SN-A2"]
+              }
+            }
+          ],
+          "notes": "Deliver to reception, call ahead. Gate code: 1234"
+        }
+      ],
+      "supportTickets": []
+    },
+    {
+      "customerId": "CUST-1003",
+      "profile": {
+        "name": { "first": "Joana", "last": "Pereira" },
+        "email": "joana.pereira@example.com",
+        "phone": "+351-913-222-333",
+        "marketingOptIn": true
+      },
+      "addresses": [],
+      "orders": [],
+      "supportTickets": [
+        {
+          "ticketId": "TCK-777",
+          "createdAt": "2026-01-10T08:00:00Z",
+          "type": "address_change",
+          "status": "open",
+          "messages": [
+            {
+              "at": "2026-01-10T08:00:00Z",
+              "from": "customer",
+              "text": "Please update my shipping address to: Rua Nova 5, Porto."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
