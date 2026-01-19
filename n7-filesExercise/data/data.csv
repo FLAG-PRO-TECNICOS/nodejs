@@ -1,0 +1,4 @@
+id,email,telefone,nome,numeroOrders
+CUST-1001,ana.silva@example.com,+351-912-000-111,Ana Silva,2
+CUST-1002,miguel.costa@example.com,null,Miguel Costa,1
+CUST-1003,joana.pereira@example.com,+351-913-222-333,Joana Pereira,0
