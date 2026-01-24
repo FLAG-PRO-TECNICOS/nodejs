@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Event List</h1>
+    <ul>
+        <% for(let i=0; i < eventList.length; i++) { %>
+            <li><a href="/events/?index=<%= i %>">
+                    <%= eventList[i].title %>
+                </a></li>
+            <% } %>
+                <!--
+        <li><a href="/events/?index=0">Evento 1</a></li>
+        <li><a href="/events/?index=1">Evento 2</a></li>
+        <li><a href="/events/?index=3">Evento 3</a></li>
+        <li><a href="/events/?index=4">Evento 4</a></li>
+                -->
+    </ul>
+</body>
+
+</html>
